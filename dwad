@@ -1,10 +1,3 @@
-Menu.CheckBox("Misc", "Gun Mods", "Max Ammo On Equip", false, function(v) 
-    bronxfun.misc.gunmods.maxammoonequip = v
-end)
-Menu.CheckBox("Misc", "Gun Mods", "Silent Chambering", false, function(v) 
-    bronxfun.misc.gunmods.nochambersound = v
-end)
-
     for _, child in pairs(localplayer.Backpack:GetChildren()) do
         if child:FindFirstChild("Ammo") and child:FindFirstChild("Mag") and bronxfun.misc.gunmods.maxammoonequip then
             local setting =  require(child:FindFirstChild("Setting"))
@@ -16,4 +9,11 @@ end)
             ammo.Value = 24
         end
     end
+end)
+
+Menu.CheckBox("Misc", "Gun Mods", "Max Ammo On Equip", false, function(v) 
+    bronxfun.misc.gunmods.maxammoonequip = v
+end)
+Menu.CheckBox("Misc", "Gun Mods", "Silent Chambering", false, function(v) 
+    bronxfun.misc.gunmods.nochambersound = v
 end)
